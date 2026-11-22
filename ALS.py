@@ -64,6 +64,19 @@ def calcular_coeficiente_linear(n, sx, sy, coe_ang):
 #Desvios
 
 def calcular_desvios(x, y, a, b):
+    """
+    Calcula as ordenadas estimadas pela reta, os desvios individuais (di) para cada ponto
+    e o desvio total quadrático (D) de uma reta específica.
+
+    @param x: Lista com as abscissas (valores de x) dos pontos amostrados (list[float]).
+    @param y: Lista com as ordenadas (valores de y) reais dos pontos amostrados (list[float]).
+    @param a: Coeficiente linear da reta a ser avaliada (float).
+    @param b: Coeficiente angular da reta a ser avaliada (float).
+    @return: Tupla (ordenadas_reta, desvio_resultado, desvio_total_reta) contendo a lista de
+             valores estimados de y (list[float]), a lista de desvios individuais (list[float])
+             e o desvio total quadrático D (float)[cite: 2].
+    """
+
     ordenadas_reta = []
 
     for abscissa in x:
@@ -85,6 +98,17 @@ def calcular_desvios(x, y, a, b):
 #Melhor Reta
 
 def melhor_reta(n, x, y):
+    """
+    Calcula os coeficientes da melhor reta pelo método de Ajuste Linear Simples (Mínimos Quadrados)
+    a partir dos somatórios das coordenadas fornecidas[cite: 2].
+
+    @param n: Quantidade total de pontos amostrados (int).
+    @param x: Lista com as abscissas (valores de x) dos pontos de entrada (list[float]).
+    @param y: Lista com as ordenadas (valores de y) dos pontos de entrada (list[float]).
+    @return: Tupla (coeficiente_linear, coeficiente_angular) contendo respectivamente os
+             coeficientes a e b da melhor reta (tuple[float, float])[cite: 2].
+    """
+    
     som_x = somatorio_abscissas(x)
     som_y = somatorio_ordenadas(y)
     som_x_quadrado = somatorio_abscissas_quadrada(x)

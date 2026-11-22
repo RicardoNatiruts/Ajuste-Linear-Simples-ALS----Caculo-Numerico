@@ -1,5 +1,5 @@
 from ALS import calcular_desvios, melhor_reta
-from Plotar_Resultados import plotar_em_tabela
+from Plotar_Resultados import plotar_em_tabela, plotar_plano_cartesiano
 
 n = int(input("Digite a quantidade de pontos: "))
 
@@ -38,6 +38,8 @@ for i in range(3):
     desvios_totais_retas.append(desvio_total)
 
 plotar_em_tabela(n, abscissas, ordenadas, a_retas, b_retas, y_retas, desvios_retas, desvios_totais_retas)
+
+plotar_plano_cartesiano(abscissas, ordenadas, a_retas, b_retas, desvios_totais_retas)
 
 
  
