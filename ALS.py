@@ -52,7 +52,7 @@ def somatorio_produto(x, y):
     return total
 
 def calcular_coeficiente_angular(n, sxy, sx, sy, sxq):
-    return n * sxy - (sx * sy) / (n * sxq - pow(sx, 2))
+    return (n * sxy - (sx * sy)) / (n * sxq - pow(sx, 2))
 
 def calcular_coeficiente_linear(n, sx, sy, coe_ang):
     return (sy - (sx * coe_ang)) / n

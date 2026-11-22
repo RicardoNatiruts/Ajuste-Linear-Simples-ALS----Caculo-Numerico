@@ -1,7 +1,7 @@
 from ALS import calcular_desvios, melhor_reta
 from Plotar_Resultados import plotar_em_tabela
 
-n = int(input())
+n = int(input("Digite a quantidade de pontos: "))
 
 abscissas = []
 ordenadas = []
